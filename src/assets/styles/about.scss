@@ -1,0 +1,312 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  .a-container {
+    width: 100%;
+    //padding: 40px 20px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+
+    color: white;
+    .fs-section {
+      display: flex;
+      align-items: stretch;
+      column-gap: 20px;
+      margin-bottom: 20px;
+
+      .txt-container {
+        width: 30%;
+        .text {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        .title {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          align-items: center;
+        }
+        .img {
+          width: 100%;
+        }
+      }
+    }
+    .sc-section {
+      display: flex;
+      column-gap: 20px;
+
+      .a-side {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .txt {
+          display: flex;
+          column-gap: 20px;
+          .img-container {
+            width: 30%;
+            .img {
+              width: 100%;
+              height: 100px;
+              object-fit: cover;
+            }
+          }
+          .descripction {
+            width: 80%;
+            font-size: 12px;
+            text-align: justify;
+            overflow: hidden;
+          }
+        }
+        .figures {
+          display: flex;
+          column-gap: 20px;
+
+          .figure-a {
+            width: 50%;
+            height: min-content;
+          }
+          .figure-b {
+            width: 100%;
+            height: min-content;
+          }
+        }
+      }
+      .b-side {
+        width: 16%;
+      }
+    }
+  }
+
+  .b-container {
+    display: flex;
+    //max-width: 550px;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-direction: column;
+    row-gap: 20px;
+
+    .title {
+      width: 100%;
+      .img {
+        width: 100%;
+      }
+    }
+    .sub-title {
+      .img {
+        object-fit: cover;
+        width: 100%;
+        height: 50px;
+      }
+    }
+
+    .cont {
+      overflow: hidden;
+      display: flex;
+      .a-side {
+        display: none;
+        width: 20%;
+        box-sizing: border-box;
+        .img-1 {
+          object-fit: contain;
+          width: 100%;
+          /* Estilos para la primera imagen en el lado A */
+        }
+        .img-2 {
+          object-fit: cover;
+          width: 100%;
+          /* Estilos para la segunda imagen en el lado A */
+        }
+      }
+
+      .b-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        .header {
+          display: flex;
+          height: 30px;
+          justify-content: space-between;
+          .img-1 {
+            object-fit: contain;
+            width: 100%;
+            height: 20px;
+          }
+          .img-2 {
+            object-fit: contain;
+            width: 100%;
+            height: 20px;
+            /* Estilos para la segunda imagen dentro del header en el lado B */
+          }
+          .img-3 {
+            object-fit: contain;
+            width: 100%;
+            height: 20px;
+            /* Estilos para la tercera imagen dentro del header en el lado B */
+          }
+        }
+        .body {
+          width: 100%;
+          .img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            /* Estilos para la imagen dentro del body en el lado B */
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      max-height: 20vh;
+      column-gap: 20px;
+
+      .a-side {
+        width: 60%;
+        padding: 10px;
+        border: 1px solid white;
+        .img {
+          width: 100%;
+          height: 100%;
+          /* Estilos para la imagen en el lado A del bottom */
+        }
+      }
+
+      .b-side {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        column-gap: 20px;
+        row-gap: 20px;
+        .img1 {
+          height: 9vh;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+          border: 1px solid white;
+
+          /* Estilos para la primera imagen en el lado B del bottom */
+        }
+        .img2 {
+          width: 100%;
+          /* Estilos para la segunda imagen en el lado B del bottom */
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .about-container {
+    flex-direction: row;
+    .a-container {
+      height: 100vh;
+      max-width: 40%;
+      min-width: 500px;
+      .fs-section {
+        height: 70%;
+        overflow: hidden;
+        .txt-container {
+          .text {
+          }
+        }
+
+        .content {
+          .title {
+          }
+          .img {
+          }
+        }
+      }
+      .sc-section {
+        .a-side {
+          .txt {
+            .img {
+            }
+            .descripction {
+            }
+          }
+          .figures {
+            .figure-a {
+            }
+            .figure-b {
+            }
+          }
+        }
+        .b-side {
+          width: 12%;
+        }
+      }
+    }
+
+    .b-container {
+      max-width: 600px;
+      .title {
+        .img {
+        }
+      }
+      .sub-title {
+        .img {
+        }
+      }
+
+      .cont {
+        height: 60vh;
+        column-gap: 20px;
+        .a-side {
+          display: block;
+          width: 20%;
+          height: 100%;
+          .img-1 {
+            height: 50vh;
+            border: 1px solid white;
+            object-fit: cover;
+          }
+          .img-2 {
+          }
+        }
+
+        .b-side {
+          .header {
+            .img-1 {
+            }
+            .img-2 {
+            }
+            .img-3 {
+            }
+          }
+          .body {
+            .img {
+            }
+          }
+        }
+      }
+
+      .bottom {
+        .a-side {
+          .img {
+          }
+        }
+
+        .b-side {
+          .img1 {
+          }
+          .img2 {
+          }
+        }
+      }
+    }
+  }
+}
