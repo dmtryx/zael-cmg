@@ -10,7 +10,7 @@
       <div class="main-container">
         <div class="top-line">
           <div class="line"></div>
-          <img src="../assets/figures/15.png" alt="" class="img" />
+          <img src="../assets/figures/15.jpg" alt="" class="img" />
         </div>
         <div class="song-container">
           <img :src="audioImage" class="song-icon" alt="" />
