@@ -1,10 +1,28 @@
-<script setup></script>
+<script setup>
+import { album_list } from "@/data.js";
+import { useMusicStore } from "@/store/musicStore";
+import { ref, computed } from "vue";
+
+const isPlaying = computed(() => musicStore.isPlaying);
+
+const musicStore = useMusicStore();
+const changeStatePlayer = (name, artist, image, links) => {
+  musicStore.setInfo(false, name, artist, image, links);
+  if (!isPlaying.value) {
+    musicStore.setHide(false);
+    //musicStore.changeState();
+  } else {
+    musicStore.pauseAudio();
+    musicStore.changeState();
+  }
+};
+</script>
 <template>
   <div class="alb-container">
     <div class="v-line" />
     <section class="main">
       <div class="h-line" />
-      <div class="alb-title chakra-petch-bold">ALBUMS</div>
+      <div class="alb-title chakra-petch-bold">MÁS ESCUCHADAS Y ALBUMS</div>
       <div class="alb-content">
         <div class="figure">
           <img
@@ -21,32 +39,20 @@
         </div>
         <div class="aa">
           <div class="albums">
-            <div class="item">
+            <div class="item" v-for="(item, index) in album_list" :key="index">
               <img
-                src="../../assets/test/album.png"
+                :src="item.image"
                 alt=""
                 style="width: 100%; object-fit: cover"
-              />
-            </div>
-            <div class="item">
-              <img
-                src="../../assets/test/album.png"
-                alt=""
-                style="width: 100%; object-fit: cover"
-              />
-            </div>
-            <div class="item">
-              <img
-                src="../../assets/test/album.png"
-                alt=""
-                style="width: 100%; object-fit: cover"
-              />
-            </div>
-            <div class="item">
-              <img
-                src="../../assets/test/album.png"
-                alt=""
-                style="width: 100%; object-fit: cover"
+                @click="
+                  changeStatePlayer(
+                    item.name,
+                    item.artist,
+                    item.image,
+                    item.audio,
+                    item.links
+                  )
+                "
               />
             </div>
           </div>
@@ -109,6 +115,12 @@
           row-gap: 20px;
           .item {
             width: 100px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+          }
+
+          .item:hover {
+            scale: 1.05;
           }
         }
       }

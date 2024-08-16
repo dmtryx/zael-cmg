@@ -11,6 +11,7 @@ tailChase.register();
 
 const musicStore = useMusicStore();
 const isPlaying = computed(() => musicStore.isPlaying);
+const isSong = computed(() => musicStore.isSong);
 const actualIndex = ref(null);
 
 function playSong(url) {
@@ -23,22 +24,24 @@ function pauseSong() {
 }
 
 const changeStatePlayer = (index, name, artist, image, url, links) => {
-  if (actualIndex.value === index) {
+  if (actualIndex.value === index && isSong.value === true) {
+    musicStore.setIsSong(true);
+
     if (!isPlaying.value) {
       musicStore.changeState();
       musicStore.playController(url);
-      musicStore.changeHide();
+      musicStore.setHide(false);
     } else {
       musicStore.changeState();
-      musicStore.changeHide();
+      musicStore.setHide(true);
       pauseSong();
     }
   } else {
-    musicStore.setInfo(name, artist, image, links);
+    musicStore.setInfo(true, name, artist, image, links);
     musicStore.playController(url);
     actualIndex.value = index;
     if (!isPlaying.value) {
-      musicStore.changeHide();
+      musicStore.setHide(false);
       musicStore.changeState();
     }
   }
@@ -48,7 +51,7 @@ const changeStatePlayer = (index, name, artist, image, url, links) => {
 <template>
   <div class="rel-container">
     <div class="rel-title">
-      <div class="title">RELEASES</div>
+      <div class="title">LANZAMIENTOS</div>
       <span class="hr"></span>
       <img
         src="https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Fimages%2Fland_icon_2.jpg?alt=media&token=02d6adc5-c2e7-49da-a61e-4bcf0369655c"
@@ -123,9 +126,10 @@ const changeStatePlayer = (index, name, artist, image, url, links) => {
       height: 1px;
       margin: 0 20px;
       background-color: white;
+      display: none;
     }
     .img {
-      height: 35px;
+      height: 25px;
     }
   }
   .rel-txt {
@@ -187,36 +191,38 @@ const changeStatePlayer = (index, name, artist, image, url, links) => {
 
 @media (min-width: 760px) {
   .rel-container {
-    /*
     .rel-title {
       .title {
       }
       .hr {
+        display: flex;
       }
       .img {
+        height: 35px;
       }
     }
-      */
     .rel-txt {
-      width: 70%;
     }
     .rel-songs-container {
-      width: 70%;
-    }
-    /*
-    .rel-songs {
-      .img {
-      }
-      .content-song {
-        .name-song {
+      .rel-songs {
+        .img {
         }
-        .artists {
+        .content-song {
+          .name-song {
+          }
+          .artists {
+          }
+        }
+        .play-button {
+          .icon {
+          }
+        }
+        .play-button:hover {
+          .icon {
+          }
         }
       }
-      .button-icon {
-      }
     }
-      */
   }
 }
 </style>

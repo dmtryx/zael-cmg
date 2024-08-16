@@ -27,28 +27,37 @@ onMounted(() => {
             <div class="chanels iconss">
               <img v-if="isImage1Loaded" :src="image1" alt="Imagen 1" />
 
-              <a class="item sp_class" href="https://www.google.com">
+              <a
+                class="item sp_class"
+                href="https://open.spotify.com/artist/1cHbd5mRSlp90NWAORnVmM?si=MnEVW3-hRpyNVHi6kNqAjA"
+              >
                 <img
                   src="@\assets\figures\channel_sp.svg"
                   alt=""
                   style="width: 100%; height: 100%"
                 />
               </a>
-              <a class="item yt_class" href="https://www.google.com">
+              <a class="item yt_class" href="https://www.youtube.com/@ZaelCmg">
                 <img
                   src="@\assets\figures\channel_yt.svg"
                   alt=""
                   style="width: 100%; height: 100%"
                 />
               </a>
-              <a class="item ig_class" href="https://www.google.com">
+              <a
+                class="item ig_class"
+                href="https://www.instagram.com/zaelcmg/"
+              >
                 <img
                   src="@\assets\figures\channel_ig.svg"
                   alt=""
                   style="width: 100%; height: 100%"
                 />
               </a>
-              <a class="item fb_class" href="https://www.google.com">
+              <a
+                class="item fb_class"
+                href="https://www.facebook.com/stiventello01"
+              >
                 <img
                   src="@\assets\figures\channel_fb.svg"
                   alt=""

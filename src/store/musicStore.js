@@ -8,7 +8,8 @@ export const useMusicStore = defineStore("music", () => {
   const audioImage = ref("");
   const audioLinks = ref([""]);
   const hide = ref(true);
-
+  const isAlbum = ref(false);
+  const isSong = ref(true);
   const isPlaying = ref(false);
   let audioElement = null;
 
@@ -19,11 +20,16 @@ export const useMusicStore = defineStore("music", () => {
     }
   }
 
-  function changeHide() {
-    hide.value = !hide.value;
+  function setHide(value) {
+    hide.value = value;
   }
 
-  function setInfo(name, artists, image, links) {
+  function setIsSong(value) {
+    isSong.value = value;
+  }
+
+  function setInfo(tp, name, artists, image, links) {
+    isSong.value = tp;
     audioName.value = name;
     audioArtists.value = artists;
     audioImage.value = image;
@@ -36,6 +42,7 @@ export const useMusicStore = defineStore("music", () => {
     } else "f";
   }
 
+  //  function playController(url, "tr") {
   function playController(url) {
     if (url === audioUrl.value) {
       audioElement.play();
@@ -70,15 +77,18 @@ export const useMusicStore = defineStore("music", () => {
     audioImage,
     audioLinks,
     hide,
+    isSong,
     isPlaying,
+    isAlbum,
     setAudioUrl,
+    setIsSong,
     setInfo,
     playAudio,
     playController,
     pauseAudio,
     setAudioElement,
     changeState,
-    changeHide,
+    setHide,
     getState,
   };
 });

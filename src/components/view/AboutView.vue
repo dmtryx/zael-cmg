@@ -29,9 +29,13 @@
         <div class="a-side">
           <div class="txt">
             <div class="img-container">
-              <div
-                style="width: 100%; height: 100%; background-color: blue"
-              ></div>
+              <div style="width: 100%; height: 100%; background-color: blue">
+                <img
+                  src="https://i.ibb.co/9GNtsM5/Whats-App-Image-2024-08-15-at-4-47-49-PM.jpgw"
+                  style="width: 100%; height: 100%"
+                  alt=""
+                />
+              </div>
               <!--
             <img
               src="../../assets/figures/about-3.png"
@@ -73,10 +77,13 @@
     <section class="b-container">
       <div class="title">
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Fimages%2Fabout_title_2.svg?alt=media&token=64749b70-c79b-4b3a-bf2c-ac2f81a283ea"
+          src="https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Fimages%2FTHE%20GAME%20CHANGE%20FOREVER.svg?alt=media&token=dfc9d2b4-8240-471b-bc90-244daca8ae5a"
           alt=""
           class="img"
         />
+        <!--
+        <div class="txt chakra-petch-bold">TRAUMA IS CONFUSING</div>
+          -->
       </div>
       <div class="sub-title">
         <img

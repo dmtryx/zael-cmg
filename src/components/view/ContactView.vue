@@ -1,9 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import MaskedInput from "vue-the-mask";
 
 const isMail = ref(true);
 const waiting = ref(false);
+const sent = ref(false);
 
 const setContactMode = () => {
   isMail.value = !isMail.value;
@@ -19,6 +20,57 @@ const toggleInputType = () => {
     inputType.value = "text"; // Cambia a 'text' para permitir correos electrónicos
   }
 };
+
+// Declarar una variable reactiva para el mensaje de estado
+const statusMessage = ref("");
+
+function texto() {
+  if (waiting.value) {
+    return "ENVIANDO...";
+  } else return "ENVIAR";
+}
+
+// Función para manejar el envío del formulario
+const handleSubmit = async (event) => {
+  const form = event.target;
+  const formData = new FormData(form);
+  waiting.value = !waiting.value;
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      sent.value = true;
+      waiting.value = !waiting.value;
+      console.log("uwu");
+      statusMessage.value = "¡Gracias! Tu mensaje ha sido enviado.";
+      form.reset(); // Opcional: Limpia el formulario
+    } else {
+      statusMessage.value =
+        "Hubo un problema con el envío. Inténtalo nuevamente.";
+    }
+  } catch (error) {
+    statusMessage.value = "Hubo un error al enviar el formulario.";
+  }
+};
+
+watch(sent, (newValue) => {
+  if (newValue) {
+    // Desplazar la vista al inicio de la página
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+});
+
+function redirectWhatsapp() {
+  console.log("owo");
+  window.location.href = "https://www.google.com"; // Cambia esto al enlace que desees
+}
 </script>
 <template>
   <div class="contact-container">
@@ -50,7 +102,12 @@ const toggleInputType = () => {
           />
         </div>
       </div>
-      <div class="form-cont">
+      <form
+        class="form-cont"
+        action="https://formspree.io/f/mblrkogl"
+        method="POST"
+        @submit.prevent="handleSubmit"
+      >
         <div class="mode">
           <div class="buttons chakra-petch-bold">
             <div
@@ -68,17 +125,19 @@ const toggleInputType = () => {
               Celular
             </div>
           </div>
-          <input class="input" :type="inputType" />
+          <input class="input" :type="inputType" name="contacto" required />
           <div class="adv chakra-petch-regular">
             Enviaremos un mensaje o celular a tu correo
           </div>
         </div>
         <div class="msg">
           <div class="subtitle chakra-petch-bold">Mensaje</div>
-          <textarea class="input"></textarea>
+          <textarea class="input" name="message"></textarea>
         </div>
-        <div class="button-submit chakra-petch-bold">ENVIAR</div>
-      </div>
+        <button class="button-submit chakra-petch-bold" type="submit">
+          {{ texto() }}
+        </button>
+      </form>
       <div class="txt-cont chakra-petch-bold">
         <div class="hr"></div>
         <div class="msg">ó si prefieres escribeme</div>
@@ -89,7 +148,12 @@ const toggleInputType = () => {
           src="https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Fimages%2Fwhatsapp_icon.svg?alt=media&token=62c51fff-5001-4b20-ac5a-82c3c9ff2525"
           class="icon"
         />
-        <div class="txt">WHATSAPP -></div>
+        <a
+          href="https://wa.me/573183584849"
+          style="text-decoration: none; color: white"
+        >
+          <div class="txt">WHATSAPP -></div>
+        </a>
       </div>
     </div>
   </div>
