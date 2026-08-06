@@ -5,10 +5,10 @@ export const songs_list = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Ficon_songs%2F1.png?alt=media&token=21e42ae6-3471-4449-bcd9-0e38407c24cd",
     audio:
-      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/trapstart-test.mp3?alt=media&token=1687e190-6e3f-4be4-b05c-dbab0571046b",
-    links: [
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
+      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/sounds%2F1_ninfomana_L25ZTWX8.mp3?alt=media&token=ed2772db-6902-4274-8f62-71688be23b39",
+      links: [
+      "https://open.spotify.com/track/7D6B39rSfA5WvdN9iD06Wa?si=5457b95ed71446ce",
+      "https://youtu.be/tNEVR5TE1is?si=9_YlwYKLaFuh10bp",
     ],
   },
   {
@@ -17,10 +17,10 @@ export const songs_list = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Ficon_songs%2F2.png?alt=media&token=8f82268d-15cf-42f2-a19f-a4e20c132e5d",
     audio:
-      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Fsongs%2FY2meta.app%20-%20Kenya%20Grace%20-%20Strangers%20(CH4YN%20x%20SANE%20Remix)%20(128%20kbps).mp3?alt=media&token=7b2860e7-639a-486f-83de-2178aef5ffbe",
+      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/sounds%2F2_efectiv_BksyxLKP.mp3?alt=media&token=410c8e0f-c745-4f67-8006-187ff07d65ef",
     links: [
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
+      "spotify:album:1QSoCciHPmRla96Jv0GYKK",
+      "https://youtu.be/wDZiTuA5ppA?si=L-2yoX1hEP57FJKe",
     ],
   },
   {
@@ -29,10 +29,10 @@ export const songs_list = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Ficon_songs%2F3.png?alt=media&token=711739c3-4b02-4814-958b-e3d7ce24ed7c",
     audio:
-      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/trapstart-test.mp3?alt=media&token=1687e190-6e3f-4be4-b05c-dbab0571046b",
+      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/sounds%2F3_trapstart.mp3?alt=media&token=a16baff2-6c3a-4162-a127-54eedc1acaf1",
     links: [
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
+      "https://open.spotify.com/album/3fMxZNbg2M8IbiHE3Hr5xP?si=b42aaaa929584ed9",
+      "https://youtu.be/V2OA47ml1_U?si=morFqMEUXIf1MsO9",
     ],
   },
   {
@@ -41,10 +41,10 @@ export const songs_list = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Ficon_songs%2F4.png?alt=media&token=109e5d21-4914-4551-a31c-0e5fbf2e75bd",
     audio:
-      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/trapstart-test.mp3?alt=media&token=1687e190-6e3f-4be4-b05c-dbab0571046b",
+      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/sounds%2F4_homies_wrP52SwV.mp3?alt=media&token=2c8e3152-3347-48ea-98ea-73e0c42d1e2d",
     links: [
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
+      "spotify:track:21qi3c7rYzYh9OL8NfpH93",
+      "https://youtu.be/nh_VP1afh60?si=IA6dx0G5Slb2QwtO",
     ],
   },
   {
@@ -53,10 +53,10 @@ export const songs_list = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/public%2Ficon_songs%2F5.png?alt=media&token=1c67d2b0-ba77-4a99-af6d-a5193276195a",
     audio:
-      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/trapstart-test.mp3?alt=media&token=1687e190-6e3f-4be4-b05c-dbab0571046b",
+      "https://firebasestorage.googleapis.com/v0/b/zael-cmg.appspot.com/o/sounds%2F5_mercedes-benz_dFmjuytB.mp3?alt=media&token=d4bb6c6b-a8eb-4f93-892c-b29f5d57241c",
     links: [
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
-      "https://www.youtube.com/watch?v=qRy7c851C2A",
+      "https://open.spotify.com/track/21qi3c7rYzYh9OL8NfpH93?si=fff27c98ec6c4682",
+      "https://youtu.be/cSiI6nQO4Xc?si=8dhYsIPO_ETAqn7S",
     ],
   },
 ];

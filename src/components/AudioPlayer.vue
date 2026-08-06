@@ -149,13 +149,4 @@ onUnmounted(() => {
 
 <style lang="scss">
 @import "@/assets/styles/audioplayer.scss";
-
-/*
-1. ESPACIO
-2. LEONARDO DICAPRIO
-3. BRADPID
-4. FUTURO
-
-
-*/
 </style>
