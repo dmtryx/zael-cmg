@@ -37,7 +37,10 @@ onMounted(() => {
                   style="width: 100%; height: 100%"
                 />
               </a>
-              <a class="item yt_class" href="https://www.youtube.com/@ZaelCmg">
+              <a
+                class="item yt_class"
+                href="https://www.youtube.com/channel/UCIIDHOyWOKzJQy2w5IYshnA"
+              >
                 <img
                   src="@\assets\figures\channel_yt.svg"
                   alt=""
